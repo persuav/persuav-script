@@ -1,0 +1,76 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Key System", HidePremium = false, SaveConfig = true, IntroEnabled = false})
+
+OrionLib:MakeNotification({
+	Name = "Logged In",
+	Content = "You are logged in as "..Player.Name..".",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+_G.Key = "y/B?E(H+MbQeThWm"
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+    game:GetService("CoreGui").Orion:Destroy()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/persuav/PersuavRBX-Subscribe/main/PersuavRBX-Subscribe"))()
+end
+
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Correct Key!",
+        Content = "Bingo! You have entered the correct key!",
+        Image = "rbxassetid://4483345998",
+        Time = 5
+    })
+end
+
+function IncorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Incorrect Key!",
+        Content = "The key is not correct, make sure you entered it right or check if the key is still valid (key changes ever 24 hours!)",
+        Image = "rbxassetid://4483345998",
+        Time = 10
+    })
+end
+
+local Tab = Window:MakeTab({
+	Name = "Key",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Enter Key --->",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Click Me To Check Key",
+	Callback = function()
+      		if _G.KeyInput == _G.Key then
+                MakeScriptHub()
+                CorrectKeyNotification()
+            else
+                IncorrectKeyNotification()
+            end
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Get Key - Copy link & paste in your browser (CTRL + C To Copy)"
+})
+
+Tab:AddTextbox({
+	Name = "",
+	Default = "https://link-center.net/600492/persuav-subscribe1",
+	TextDisappear = false,
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
