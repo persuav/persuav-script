@@ -14,7 +14,7 @@ _G.KeyInput = "string"
 
 function MakeScriptHub()
     game:GetService("CoreGui").Orion:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/persuav/PersuavRBX-Subscribe/main/PersuavRBX-Subscribe"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/persuav/PersuavRBX-Subscribe/main/PersuavRBX-main"))()
 end
 
 function CorrectKeyNotification()
