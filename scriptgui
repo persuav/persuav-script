@@ -68,7 +68,7 @@ local Section = Tab:AddSection({
 
 Tab:AddTextbox({
 	Name = "",
-	Default = "https://link-center.net/600492/persuav-subscribe1",
+	Default = "https://link-center.net/620711/persuav-keysystem-key",
 	TextDisappear = false,
 	Callback = function(Value)
 		print(Value)
