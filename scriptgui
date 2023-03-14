@@ -9,7 +9,7 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
-_G.Key = "B?E(H+MbQeThWmZq"
+_G.Key = "v8y/B?E(H+MbQeTh"
 _G.KeyInput = "string"
 
 function MakeScriptHub()
@@ -68,7 +68,7 @@ local Section = Tab:AddSection({
 
 Tab:AddTextbox({
 	Name = "",
-	Default = "https://link-center.net/620711/persuav-keysystem-key",
+	Default = "https://link-center.net/620711/terminoilrbx-keygen",
 	TextDisappear = false,
 	Callback = function(Value)
 		print(Value)
